@@ -1,0 +1,55 @@
+
+.profile-details-title{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.profile-details-ans{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    font-size: large;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+
+
+.dot {
+    height: 120px;
+    width: 120px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ex4-img{
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    position: relative;
+}
+
+.cardtext{
+    padding-left: 0;
+}
+
+.card-content{
+    margin: 5px;
+}
+
+
+.col-md-2 {
+    
+    max-width: 5.666667%;
+}
+
+.table-padding{
+    padding:8px !important;
+}
+
+.cardcontent{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large !important;
+    text-align: center;
+}
