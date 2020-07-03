@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+
+
+
+
+
+<body>
+    <div class="row">
+        <div class="">
+            <input id="name" type="text" name="name" class="form-control" placeholder="">
+        </div>
+    
+        <button value="GO" class="mb-3 mt-3 mr-2 btn btn-primary col-md-2" id="submit2">GO</button>
+    </div>
+                                
+                                
+    
+    <div id="name2">
+        
+    </div>
+    
+    <script>
+        $("#submit2").click(function(){
+        
+            var jsonData = $.ajax({
+                url: "data.php",
+                dataType: "json",
+                async: false,
+            }).responseText;
+          
+            console.log(jsonData);
+            
+            
+            $("#name2").html = jsonData;
+      
+            var myObj= JSON.parse(jsonData);
+
+            for(x in myObj){
+                $("#name2").html= myObj[x][0];
+            };
+        
+        });
+    </script>
+</body>
+</html>

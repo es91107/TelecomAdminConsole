@@ -1,33 +1,25 @@
 <?php 
     
     
+    include("connection.php");
     
-    
-    $link = mysqli_connect("localhost", "bscom_bill","\$EvNx[td}r@s","bscom_cmt",3306 );
-    
-    
-    // if ($_GET['submit2'] == "GO"){
-    
-    // $_GET['name'];
-    $name = "Tom";
-    echo $name;
-    
-    // $query = "SELECT * FROM users where name ='".$name."'"; 
-    $query = "SELECT * FROM users where name ='Tom'"; 
 
+    $name = $_GET['name'];
+    session_start();
+    $_SESSION['name_result'] = $name;
+    
+
+    $id_query = "SELECT ID FROM user where name ='".$name."' limit 1"; 
+    $id_result = mysqli_query($link,$id_query);
+    $_SESSION['id_result'] = mysqli_fetch_assoc($id_result)['ID'];
+
+
+    $query = "SELECT * FROM user where name ='".$name."' limit 1"; 
         
     $result = mysqli_query($link,$query);
+
     $outp = $result->fetch_all(MYSQLI_ASSOC);
     echo json_encode($outp);
-
-    // }
-    
-    
-    
-    
-
-
-
 
 
 

@@ -53,3 +53,7 @@
     font-size: large !important;
     text-align: center;
 }
+
+.alert{
+        display: none;
+     }
